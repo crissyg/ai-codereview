@@ -55,6 +55,14 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### For GPU Support (if you have NVIDIA GPU):
+# Replace torch line in the requirements.txt with:
+```
+torch==2.1.0+cu118
+torchvision==0.16.0+cu118
+torchaudio==2.1.0+cu118
+```
+
 ### 3. Configure GitHub Token
 ```
 # Create .env file
