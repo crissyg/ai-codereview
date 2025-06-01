@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Main application service
+  ai-codereview-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - DATABASE_URL=postgresql://ai_codereview:password@db:5432/ai_codereview
+      - MODEL_CACHE_DIR=/app/cache
+    volumes:
+      - ./cache:/app/cache
+      - ./logs:/app/logs
+    depends_on:
+      - db
+      - redis
+
+  # Database for storing analysis results
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=ai_codereview
+      - POSTGRES_USER=ai_codereview
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # Redis for caching and background tasks
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
