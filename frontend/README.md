@@ -1,23 +1,16 @@
 # AI-CodeReview Frontend
 
-This directory will contain the React.js frontend dashboard for AI-CodeReview.
+React.js dashboard for the AI-CodeReview system.
 
-## Planned Features
+## Features
 
-- Real-time code analysis dashboard
-- Repository management interface
-- Security metrics visualization
-- Team productivity insights
-- Pull request analysis history
+- 📊 Real-time analytics dashboard
+- 🔍 Interactive code analyzer
+- 📈 Quality and security metrics visualization
+- 📋 Analysis history and repository management
+- 🎨 Modern, responsive UI with Tailwind CSS
 
-## Technology Stack
-
-- React.js with TypeScript
-- Tailwind CSS for styling
-- Chart.js for data visualization
-- Axios for API communication
-
-## Getting Started
+## Quick Start
 
 ```
 # Install dependencies
@@ -30,8 +23,29 @@ npm start
 npm run build
 ```
 
+## Environment Setup
+
+1. Copy `.env.example` to `.env`
+2. Update the API URL to match your backend
+3. Configure any additional environment variables
+
+## Available Scripts
+
+- `npm start` - Start development server
+- `npm build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App
+
+## Technology Stack
+
+- React 18 with Hooks
+- React Router for navigation
+- React Query for data fetching
+- Tailwind CSS for styling
+- Chart.js for data visualization
+- Axios for API communication
+- React Hot Toast for notifications
+
 ## API Integration
 
-The frontend will communicate with the FastAPI backend at:
-- Development: http://localhost:8000
-- Production: Configure in environment variables
+The frontend communicates with the FastAPI backend through the API service layer. All API calls are centralized in `src/services/api.js`.
