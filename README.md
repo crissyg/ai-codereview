@@ -1,9 +1,11 @@
 # ai-codereview
 An AI-powered code review platform that automatically analyzes pull requests, detects security vulnerabilities, suggests improvements, and generates comprehensive documentation. It combines multiple AI tasks to provide a complete developer productivity solution.
 
-## What AI-CodeReview Does
+NB. This code is not yet fully functional.
 
-AI-CodeReview acts like a tireless code reviewer that:
+## What ai-codereview does
+
+ai-codereview acts like a tireless code reviewer that:
 - **Analyzes every pull request** automatically when you create or update it
 - **Finds security vulnerabilities** before they reach production
 - **Suggests improvements** to make your code better
@@ -90,7 +92,7 @@ curl -X POST "http://localhost:8000/api/v1/analyze" \
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   GitHub API    │────│   AI-CodeReview  │────│   AI Models     │
+│   GitHub API    │────│   ai-codereview  │────│   AI Models     │
 │   (Webhooks)    │    │   (FastAPI)      │    │   (HuggingFace) │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                               │
