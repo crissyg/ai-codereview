@@ -1,7 +1,7 @@
 # ai-codereview
 An AI-powered code review platform that automatically analyzes pull requests, detects security vulnerabilities, suggests improvements, and generates comprehensive documentation. It combines multiple AI tasks to provide a complete developer productivity solution.
 
-## What ai-codereview Does
+## What ai-codereview does
 
 ai-codereview acts like a tireless code reviewer that:
 - **Analyzes every pull request** automatically when you create or update it
