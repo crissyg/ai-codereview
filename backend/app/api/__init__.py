@@ -25,7 +25,7 @@ API_METADATA = {
     "version": "1.0.0",
     "contact": {
         "name": "AI-CodeReview Support",
-        "email": "support@ai-codereview.com",
+        "email": "",
     },
     "license": {
         "name": "MIT",
