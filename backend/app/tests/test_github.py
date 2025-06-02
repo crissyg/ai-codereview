@@ -16,16 +16,16 @@ from ..services.github_integration import GitHubIntegration, PullRequestInfo
 from ..models.repository import GitHubUser, Repository
 
 class TestGitHubIntegration:
-    """Test cases for the main GitHubIntegration class."""
+    """Test cases for the main GitHubIntegration class"""
     
     @pytest.fixture
     def github_token(self):
-        """Mock GitHub token for testing."""
+        """Mock GitHub token for testing"""
         return "ghp_test_token_123456789"
     
     @pytest.fixture
     def github_client(self, github_token):
-        """Create GitHubIntegration instance with test token."""
+        """Create GitHubIntegration instance with test token"""
         return GitHubIntegration(github_token)
     
     @pytest.fixture
@@ -59,7 +59,7 @@ class TestGitHubIntegration:
     
     @pytest.fixture
     def sample_pull_request_data(self):
-        """Sample GitHub pull request API response data."""
+        """Sample GitHub pull request API response data"""
         return {
             "number": 1,
             "title": "Add new feature",
@@ -88,7 +88,7 @@ class TestGitHubClientInitialization(TestGitHubIntegration):
     """Test GitHub client initialization and configuration."""
     
     def test_client_initialization_with_token(self, github_token):
-        """Test that client initializes correctly with token."""
+        """Test that client initializes correctly with token"""
         client = GitHubIntegration(github_token)
         
         assert client.github_token == github_token
@@ -97,7 +97,7 @@ class TestGitHubClientInitialization(TestGitHubIntegration):
         assert f"token {github_token}" in client.headers["Authorization"]
     
     def test_client_headers_configuration(self, github_client):
-        """Test that client headers are configured correctly."""
+        """Test that client headers are configured correctly"""
         headers = github_client.headers
         
         assert "Authorization" in headers
@@ -111,7 +111,7 @@ class TestPullRequestOperations(TestGitHubIntegration):
     
     @pytest.mark.asyncio
     async def test_fetch_pull_request_files_success(self, github_client, mock_session_response):
-        """Test successful fetching of pull request files."""
+        """Test successful fetching of pull request files"""
         # Mock response data
         files_data = [
             {
@@ -142,7 +142,7 @@ class TestPullRequestOperations(TestGitHubIntegration):
     
     @pytest.mark.asyncio
     async def test_fetch_pull_request_files_api_error(self, github_client):
-        """Test handling of API errors when fetching PR files."""
+        """Test handling of API errors when fetching PR files"""
         mock_response = Mock()
         mock_response.status = 404
         
@@ -188,7 +188,7 @@ class TestFileContentOperations(TestGitHubIntegration):
     
     @pytest.mark.asyncio
     async def test_get_file_content_success(self, github_client, mock_session_response):
-        """Test successful file content retrieval."""
+        """Test successful file content retrieval"""
         # Mock file content (base64 encoded)
         file_content = "def hello():\n    print('Hello, World!')"
         encoded_content = base64.b64encode(file_content.encode('utf-8')).decode('utf-8')
