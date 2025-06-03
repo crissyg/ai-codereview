@@ -79,13 +79,13 @@
     "code-quality",
     "static-analysis"
   ],
-  "author": "AI-CodeReview Team",
+  "author": "AI-CodeReview Christina Gordon",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/ai-codereview.git"
+    "url": "https://github.com/crissygtina/ai-codereview.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/ai-codereview/issues"
+    "url": "https://github.com/crissygtina/ai-codereview/issues"
   }
 }
