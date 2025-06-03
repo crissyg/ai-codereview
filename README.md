@@ -93,7 +93,7 @@ curl -X POST "http://localhost:8000/api/v1/analyze" \
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
 │   GitHub API    │────│   ai-codereview  │────│   AI Models     │
-│   (Webhooks)    │    │   (FastAPI)      │    │   (HuggingFace) │
+│   (Webhooks)    │    │ (Python/FastAPI) |    │   (HuggingFace) │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                               │
                        ┌──────────────────┐
