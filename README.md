@@ -68,7 +68,7 @@ torchaudio==2.1.0+cu118
 ### 3. Configure GitHub Token
 ```
 # Create .env file
-echo "GITHUB_TOKEN=your_github_token_here" > .env
+echo "GITHUB_TOKEN=ghp_your_github_token_here" > .env
 ```
 
 ### 4. Run the Application
@@ -159,7 +159,7 @@ Create a `.env` file with the following variables:
 
 ```
 # Required
-GITHUB_TOKEN=your_github_personal_access_token
+GITHUB_TOKEN=ghp_your_github_personal_access_token
 
 # Optional
 DATABASE_URL=postgresql://user:pass@localhost/ai_codereview
